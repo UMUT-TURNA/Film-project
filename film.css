@@ -1,0 +1,319 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+*{
+    margin: 0;
+}
+
+body{
+    font-family: 'Electrolize', sans-serif;
+    background-color: black;
+}
+
+
+.header {
+    width: 100%;
+    position: fixed;
+    height: 50px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.header-change {
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.header-bottom .main-nav {
+    flex-direction: column;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.header-bottom .main-nav h3 {
+    margin-bottom: 10px;
+}
+
+.header-bottom .right-nav {
+    margin: 0 auto !important;
+}
+
+.header:hover {
+    background-color: rgba(51, 51, 51, 1);
+    box-shadow: 0px 2px 10px black;
+    transition: background-color 0.3s;
+    
+}
+
+.header-active {
+    background-color: rgba(51, 51, 51, 1);
+    box-shadow: 0px 2px 10px black;
+    transition: background-color 0.3s;
+}
+
+.header .brand {
+    margin-left: 25px;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+.header .brand h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 35px;
+}
+
+.main-nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.main-nav .button-container {
+    height: calc(100% - 10px);
+    margin-top: 5px;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 5px solid transparent;
+    border-bottom-color: transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.main-nav .button-container:hover {
+    cursor: pointer;
+    border-bottom-color: red;
+    transition: border-bottom-color 0.3s;
+}
+
+.main-nav .button-container h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 26px;
+    color: white;
+}
+
+.header .right-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.right-nav .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 25px;
+    border-radius: 105px;
+}
+
+.login {
+    height: 30px;
+    background-color: red;
+}
+
+.login:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.right-nav .button-container h2 {
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    color: white;
+}
+
+/* header bitti */
+
+
+/*image başladı */
+
+
+.ana-image{
+    background: url("images/togo1.jpg");
+    background-repeat: no-repeat;
+    padding: 50px;
+    height: calc(100vh - 100px);
+    background-size: 100% 100%;
+    
+    
+}
+.ana-title{
+    padding: 100px;
+    width: 400px;
+}
+.ana-yazı{
+    width: 500px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    margin: 20px 0;
+    font-size: 20px;
+    
+}
+
+.ana-button button{
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ana-image h1 {
+    padding-left: 50px;
+    margin: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 95px;
+    color: white;
+    text-shadow: 5px 5px 10px black;
+}
+/*image bitti */
+ 
+/*film list başla*/
+
+h1{
+    color: white;
+    padding-top: 20px;
+}
+
+.film-list-container{
+    margin-left: 20px;
+}
+
+.film-listana{
+    overflow: hidden;
+    position: relative;
+}
+
+.film-list{
+    list-style: none;
+    padding: 0;
+    height: 300px;
+    display: flex;
+    column-gap: 30px;
+    align-items: center;
+    transform: translateX(0);
+    transition: 1s all ease-in-out;
+}
+
+.film-item{
+    position: relative;
+}
+
+
+.film-item:hover .film-title,
+.film-item:hover .film-item-buttons{
+    opacity: 1;
+    
+}
+
+.film-item:hover .film-item-img{
+    transform: scale(1.2);
+    margin-right: 10px;
+    transition: 1s all ease-in-out;
+    opacity: 0.5;
+}
+
+.film-item-img{
+    width: 270px;
+    height: 200px;
+    object-fit: cover;
+    transition: all 1s ease-in-out;
+}
+
+.film-title{
+    background-color: rgb(40, 40, 40, 0.9);
+    padding: 0 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    color: white;
+    transition: 1s all ease;
+}
+
+.film-item-buttons{
+    background-color: rgb(40, 40, 40, 0.4);
+    padding: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 10%;
+    left: 50px;
+    display: flex;
+    column-gap: 20px;
+    opacity: 0;
+    color: white;
+    transition: 0.7s all ease;
+}
+
+.film-item-buttons i{
+    cursor: pointer;
+    opacity: 0.9;
+    transition: 0.5s all ease;
+}
+
+.film-item-buttons i {
+    opacity: 1;
+    
+}
+
+.arrow{
+    color: white;
+    width: 100px;
+    display: flex;
+    font-size: 120px;
+    position: absolute;
+    right: 0;
+    top: 90px;
+    opacity: 0.4;
+    transition: 0.5s ease all;
+    cursor: pointer;
+}
+.arrow:hover{
+    opacity: 1;
+}
+
+/*film list bitti*/
+
+
+
+@media only screen  and (max-width: 800px){
+
+   
+    .ana-title{
+        width: 200px;
+    }
+
+    .ana-yazı{
+        height: 10vh;
+        width: 30vh;
+    }
+}
